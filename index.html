@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>USAA Front-end Assessment Test</title>
+
+    <link rel="stylesheet" type="text/css" href="./resources/css/index.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    
+</head>
+
+
+
+<body>
+    <header class="header">
+        <img src="#" alt="LOGO">
+        <nav class="nav">
+            <a href="/html/">FAQ</a>
+            <a href="/css/">Generic Schedule</a>
+            <a href="/js/">Generic Test</a>
+        </nav>
+
+        <p class="center-txt" id="top-txt">
+            Text <strong>Everyday, Everything, Everywhere</strong> <br />
+            and your generic text <strong>fully-funded Text</strong>
+        </p>
+
+        <div class="user-info">
+            <input class="user-input" type="text" name="email" placeholder="Email address" required/>
+
+            <select class="user-input" id="dist-sel" required>
+                <option selected disabled>Select your District</option>
+                <option value="1">District 1</option>
+                <option value="2">District 2</option>
+                <option value="3">District 3</option>
+                <option value="4">District 4</option>
+                <option value="5">District 5</option>
+                <option value="6">District 6</option>
+                <option value="7">District 7</option>
+                <option value="8">District 8</option>
+                <option value="9">District 9</option>
+                <option value="10">District 10</option>
+            </select>
+    
+            <button type="submit" class="user-input button" id="go-btn" onClick="clicks++;updateClickCount();">GO</button>
+        </div>
+
+        <p class="center-txt">
+            <input type="checkbox" name="info" value="info" checked>
+            <strong>I'd like to receive Generic Text about this program</strong>
+        </p>
+    </header>
+
+    <div class="row">
+        <div class="column center-txt" id="col1">
+            There are currently <br />
+            <span id="count"></span> <br />
+            Pledges from the 10 <br />
+            Districts of City, ST.
+        </div>
+        <div class="column" id="col2">
+            <img class="img" src="resources/images/recycle-circle.png">
+        </div>
+        <div class="column" id="col3">
+            LEADERBOARD <br />
+            <span class="district">District 1</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d1"></span> <br />
+            <span class="district">District 2</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d2"></span> <br />
+            <span class="district">District 3</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d3"></span> <br />
+            <span class="district">District 4</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d4"></span> <br />
+            <span class="district">District 5</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d5"></span> <br />
+            <span class="district">District 6</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d6"></span> <br />
+            <span class="district">District 7</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d7"></span> <br />
+            <span class="district">District 8</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d8"></span> <br />
+            <span class="district">District 9</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d9"></span> <br />
+            <span class="district">District 10</span>
+            <span class="leaderboard"></span>
+            <span class="dist_count" id="d10"></span> <br />
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        2015 Generic Test
+    </footer>
+    <script src="resources/js/index.js"></script>
+</body>
+</html>
