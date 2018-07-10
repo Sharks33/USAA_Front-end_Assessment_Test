@@ -1,1 +1,0 @@
-# USAA_Front-end_Assessment_Test
