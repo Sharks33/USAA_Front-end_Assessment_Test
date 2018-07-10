@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
     <title>USAA Front-end Assessment Test</title>
-
     <link rel="stylesheet" type="text/css" href="./resources/css/index.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  
 </head>
-
-
 
 <body>
     <header class="header">
@@ -21,7 +13,7 @@
         <nav class="nav">
             <a href="/html/">FAQ</a>
             <a href="/css/">Generic Schedule</a>
-            <a href="/js/">Generic Test</a>
+            <a href="/js/">Generic Text</a>
         </nav>
 
         <p class="center-txt" id="top-txt">
@@ -30,7 +22,8 @@
         </p>
 
         <div class="user-info">
-            <input class="user-input" type="text" name="email" placeholder="Email address" required/>
+            <form>
+            <input class="user-input" id="valid-email" type="text" name="email" placeholder="Email address" required/>
 
             <select class="user-input" id="dist-sel" required>
                 <option selected disabled>Select your District</option>
@@ -46,9 +39,10 @@
                 <option value="10">District 10</option>
             </select>
     
-            <button type="submit" class="user-input button" id="go-btn" onClick="clicks++;updateClickCount();">GO</button>
+            <button type="button" class="user-input button" id="go-btn" onClick="clicks++;updateClickCount();move();">GO</button>
+            </form>
         </div>
-
+        
         <p class="center-txt">
             <input type="checkbox" name="info" value="info" checked>
             <strong>I'd like to receive Generic Text about this program</strong>
@@ -62,47 +56,78 @@
             Pledges from the 10 <br />
             Districts of City, ST.
         </div>
+
         <div class="column" id="col2">
             <img class="img" src="resources/images/recycle-circle.png">
         </div>
+
         <div class="column" id="col3">
-            LEADERBOARD <br />
-            <span class="district">District 1</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d1"></span> <br />
-            <span class="district">District 2</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d2"></span> <br />
-            <span class="district">District 3</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d3"></span> <br />
-            <span class="district">District 4</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d4"></span> <br />
-            <span class="district">District 5</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d5"></span> <br />
-            <span class="district">District 6</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d6"></span> <br />
-            <span class="district">District 7</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d7"></span> <br />
-            <span class="district">District 8</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d8"></span> <br />
-            <span class="district">District 9</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d9"></span> <br />
-            <span class="district">District 10</span>
-            <span class="leaderboard"></span>
-            <span class="dist_count" id="d10"></span> <br />
+            <span id="lb-txt">LEADERBOARD</span> <br />
+
+            <div class="pledges" id="p1">
+                <span class="pledge district">District 1</span>
+                <span class="pledge pledge-bar" id="bar1">#</span>
+                <span class="pledge dist_count" id="d1" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 2</span>
+                <span class="pledge pledge-bar" id="bar2">#</span>
+                <span class="pledge dist_count" id="d2" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 3</span>
+                <span class="pledge pledge-bar" id="bar3">#</span>
+                <span class="pledge dist_count" id="d3" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 4</span>
+                <span class="pledge pledge-bar" id="bar4">#</span>
+                <span class="pledge dist_count" id="d4" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 5</span>
+                <span class="pledge pledge-bar" id="bar5">#</span>
+                <span class="pledge dist_count" id="d5" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 6</span>
+                <span class="pledge pledge-bar" id="bar6">#</span>
+                <span class="pledge dist_count" id="d6" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 7</span>
+                <span class="pledge pledge-bar" id="bar7">#</span>
+                <span class="pledge dist_count" id="d7" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 8</span>
+                <span class="pledge pledge-bar" id="bar8">#</span>
+                <span class="pledge dist_count" id="d8" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 9</span>
+                <span class="pledge pledge-bar" id="bar9">#</span>
+                <span class="pledge dist_count" id="d9" /></span>
+            </div>
+
+            <div class="pledges">
+                <span class="pledge district">District 10</span>
+                <span class="pledge pledge-bar" id="bar10">#</span>
+                <span class="pledge dist_count" id="d10" /></span>
+            </div>
         </div>
     </div>
 
-
     <footer class="footer">
-        2015 Generic Test
+        2015 Generic Text
     </footer>
     <script src="resources/js/index.js"></script>
 </body>

@@ -1,5 +1,5 @@
 let totalCount = 0;
-
+let clicks = 0;
 let dist1 = 112;
 let dist2 = 98;
 let dist3 = 119;
@@ -11,68 +11,72 @@ let dist8 = 125;
 let dist9 = 101;
 let dist10 = 27;
 
-let clicks = 0;
+const distArr = [dist1, dist2, dist3, dist4, dist5, dist6, dist7, dist8, dist9, dist10];
 
-totalCount = dist1 + dist2 + dist3 + dist4 + dist5 + dist6 + dist7 + dist8 + dist9 + dist10;
+for ( var i = 0; i < distArr.length; i++ ) {
+    totalCount += distArr[i];
+    document.getElementById("d" + (i + 1)).innerHTML = distArr[i] + " Pledges";
+}
 
-document.getElementById("d1").innerHTML = dist1;
-document.getElementById("d2").innerHTML = dist2;
-document.getElementById("d3").innerHTML = dist3;
-document.getElementById("d4").innerHTML = dist4;
-document.getElementById("d5").innerHTML = dist5;
-document.getElementById("d6").innerHTML = dist6;
-document.getElementById("d7").innerHTML = dist7;
-document.getElementById("d8").innerHTML = dist8;
-document.getElementById("d9").innerHTML = dist9;
-document.getElementById("d10").innerHTML = dist10;
-document.getElementById("count").innerHTML = totalCount;
+var pc = setInterval(pledgeCount, 3);
+var pCount = 1;
+function pledgeCount() {
+    document.getElementById("count").innerHTML = pCount;
+    pCount++;
+    if ( pCount === totalCount + 1 ) {
+        clearInterval(pc);
+    }
+}
 
-function updateClickCount() {
+updateClickCount = () => {
     var dist = document.getElementById("dist-sel");
     var distVal = dist.options[dist.selectedIndex].value;
-
-    if (distVal == 1) {
-        dist1++;
-        document.getElementById("d1").innerHTML = dist1;
-    }
-    if (distVal == 2) {
-        dist2++;
-        document.getElementById("d2").innerHTML = dist2;
-    }
-    if (distVal == 3) {
-        dist3++;
-        document.getElementById("d3").innerHTML = dist3;
-    }
-    if (distVal == 4) {
-        dist4++;
-        document.getElementById("d4").innerHTML = dist4;
-    }
-    if (distVal == 5) {
-        dist5++;
-        document.getElementById("d5").innerHTML = dist5;
-    }
-    if (distVal == 6) {
-        dist6++;
-        document.getElementById("d6").innerHTML = dist6;
-    }
-    if (distVal == 7) {
-        dist7++;
-        document.getElementById("d7").innerHTML = dist7;
-    }
-    if (distVal == 8) {
-        dist8++;
-        document.getElementById("d8").innerHTML = dist8;
-    }
-    if (distVal == 9) {
-        dist9++;
-        document.getElementById("d9").innerHTML = dist9;
-    }
-    if (distVal == 10) {
-        dist10++;
-        document.getElementById("d10").innerHTML = dist10;
+    
+    for ( var i = 0; i < distArr.length; i++ ) {
+        if ( distVal == (i + 1) ) {
+            distArr[i]++;
+            document.getElementById("d" + (i + 1)).innerHTML = distArr[i]  + " Pledges";
+        }
     }
 
-    totalCount = dist1 + dist2 + dist3 + dist4 + dist5 + dist6 + dist7 + dist8 + dist9 + dist10;
     document.getElementById("count").innerHTML = totalCount + clicks;
 }
 
+var perc = 0.0;
+var width = 0;
+var idCount = 1;
+
+move = () => {  
+    var id = setInterval(frame, 20);
+    function frame() {
+        width++;
+        var elem = document.getElementById("bar" + idCount);
+        var perc = ((distArr[idCount-1]/totalCount) * 100).toFixed(1) * 2; 
+        elem.style.width = width + '%';
+        if ( width >= perc ) {
+            width = 0;
+            idCount++;
+        }
+        if ( idCount > distArr.length ) {
+            clearInterval(id);
+        }
+    }
+}
+
+validEmail = () => { //Need to add regex
+    if ( document.getElementById("valid-email").value.length > 0 ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+window.onload = () => {
+    move();
+    document.getElementById("go-btn").disabled = true;
+    document.getElementById("dist-sel").onchange = function() {
+        if ( this.options[this.selectedIndex].value >= 1 && validEmail() ) {
+            document.getElementById("go-btn").disabled = false;
+        }
+    }
+}

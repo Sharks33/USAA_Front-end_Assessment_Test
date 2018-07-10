@@ -25,20 +25,31 @@ nav a {
 .column {
     float: left;
     padding: 10px;
+    height: 400px;
 }
 
 #col1 {
     width: 42%;
-    font-size: 40px;
-    padding:  50px 50px 50px 150px;
+    font-size: 36px;
+    padding:  50px 0px 50px 220px;
 }
 
 #col2 {
     width: 16%;
+    margin: 60px 0 80px 0;
+    height:350px;
+    background: linear-gradient(to right, 
+                transparent 0%, 
+                transparent calc(50% - 0.81px), 
+                #FFFFFF calc(50% - 0.8px), 
+                #FFFFFF calc(50% + 0.8px), 
+                transparent calc(50% + 0.81px), 
+                transparent 100%); 
 }
 
 #col3 {
     width: 42%;
+    padding-top: 50px;
 }
 
 #count {
@@ -64,6 +75,8 @@ nav a {
 .img {
     display:block;
     margin:auto;
+    width: 110px;
+    padding-top: 100px;
 }
 
 .center-txt {
@@ -102,17 +115,41 @@ body {
 }
 
 .button {
-    
     background-color: #FFFFFF;
-    
+    width: 165px;
     color: #4272B4;
-    
+    font-weight: 600;
 }
 
-.leaderboard {
+#lb-txt {
+    color: #FFFFFF;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.pledges {
+    padding: 2px 2px 2px 0;
+}
+
+.pledge {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    padding: 5px;
+}
+
+#p1 {
+    padding-top: 10px; 
+}
+
+.pledge-bar {
     background-color: #084D8C;
+    color: #084D8C;
     display:inline-block;
-    width: 50px;
+    width: 15px;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    margin-left: -5px;
 }
 
 .district {
@@ -120,10 +157,12 @@ body {
     color: #084D8C;
     display:inline-block;
     width: 90px;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
 }
 
 .dist_count {
-    color: #FFFFFF;
+    color: #96B1D5;
     display:inline-block;
     width: 90px;
 }
