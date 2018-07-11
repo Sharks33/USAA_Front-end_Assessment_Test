@@ -1,15 +1,15 @@
-let totalCount = 0;
-let clicks = 0;
-let dist1 = 112;
-let dist2 = 98;
-let dist3 = 119;
-let dist4 = 126;
-let dist5 = 129;
-let dist6 = 44;
-let dist7 = 118;
-let dist8 = 125;
-let dist9 = 101;
-let dist10 = 27;
+var totalCount = 0;
+var clicks = 0;
+var dist1 = 112;
+var dist2 = 98;
+var dist3 = 119;
+var dist4 = 126;
+var dist5 = 129;
+var dist6 = 44;
+var dist7 = 118;
+var dist8 = 125;
+var dist9 = 101;
+var dist10 = 27;
 
 const distArr = [dist1, dist2, dist3, dist4, dist5, dist6, dist7, dist8, dist9, dist10];
 
@@ -71,12 +71,27 @@ validEmail = () => { //Need to add regex
     }
 }
 
+validSelection = () => {
+    if ( document.getElementById("dist-sel").value >= 1 ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+buttonCheck = () => {
+    if ( validEmail() && validSelection() ) {
+        clicks++;
+        updateClickCount();
+    } else if ( validEmail() && !validSelection() ) {
+        alert("Please select your district");
+    } else if ( !validEmail() && validSelection() ) {
+        alert("Please enter a valid email address");
+    } else {
+        alert("Please enter a valid email address and select your district");
+    }
+}
+
 window.onload = () => {
     move();
-    document.getElementById("go-btn").disabled = true;
-    document.getElementById("dist-sel").onchange = function() {
-        if ( this.options[this.selectedIndex].value >= 1 && validEmail() ) {
-            document.getElementById("go-btn").disabled = false;
-        }
-    }
 }

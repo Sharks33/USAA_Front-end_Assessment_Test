@@ -6,13 +6,14 @@
     background-position: 8% 0%;
 }
 
-.footer {
-    background-color: #FFFFFF;
-    text-align: center;
+#logo {
+    width: 45px;
+    float: left;
 }
 
 .nav {
     text-align: right;
+    padding: 25px;
 }
 
 nav a {
@@ -54,6 +55,7 @@ nav a {
 
 #count {
     font-size: 120px;
+    font-weight: bold;
     color: #62FDAB;
 }
 
@@ -110,15 +112,24 @@ body {
     color: #4272B4;
     border: 0px;
     border-radius: 0.3em;
-    padding: 14px 25px 14px 25px;
+    padding: 16px 28px 16px 28px;
     cursor: pointer;
+    margin: 3.5px;
+    font-size: 20px;
 }
 
 .button {
     background-color: #FFFFFF;
-    width: 165px;
+    width: 200px;
     color: #4272B4;
     font-weight: 600;
+}
+
+#dist-sel { 
+    background-image:url('../images/downarrow.png');
+    background-repeat: no-repeat;
+    background-position: 93% 50%; 
+    padding-right: 45px;
 }
 
 #lb-txt {
@@ -165,4 +176,13 @@ body {
     color: #96B1D5;
     display:inline-block;
     width: 90px;
+}
+
+.footer {
+    background-color: #FFFFFF;
+    text-align: center;
+    color: #4272B4;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 30px;
 }
