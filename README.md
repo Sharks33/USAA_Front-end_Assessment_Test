@@ -1,11 +1,11 @@
 # USAA Frontend Assessment
 
-## Demo
-
+## Demo:
 A demo site running this SPA can be found [here](https://sharks33.github.io/USAA_Front-end_Assessment_Test/).
 
-## Instructions
+## Instructions:
 Included: flat comp and assets
+[[https://github.com/Sharks33/USAA_Front-end_Assessment_Test/resources/images/pledgetest.png|alt=comp]]
 Assessment must be completed and submitted within 5 hours of being recieved. 
 
 ## The guidelines for the assessment are as follows: 
